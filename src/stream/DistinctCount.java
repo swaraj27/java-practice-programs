@@ -31,7 +31,5 @@ public class DistinctCount {
                         .distinct()
                         .count();
         System.out.println("wordCount "+wordCount);
-
-
     }
 }
