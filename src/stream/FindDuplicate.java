@@ -40,6 +40,13 @@ public class FindDuplicate {
 
        System.out.println("Duplicates number  "+ duplicateStream);
 
+       //find the common elements between 2 list
+        List<Integer> ls1 = Arrays.asList(1,2,3,4,5);
+        List<Integer> ls2 = Arrays.asList(3,4,5,6,7);
+
+        List<Integer> common = ls1.stream().filter(ls2::contains).collect(Collectors.toList());
+        System.out.println("common "+common);
+
 
     }
 }
