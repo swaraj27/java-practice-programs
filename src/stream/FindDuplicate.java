@@ -47,6 +47,19 @@ public class FindDuplicate {
         List<Integer> common = ls1.stream().filter(ls2::contains).collect(Collectors.toList());
         System.out.println("common "+common);
 
+        //find duplicate with another logic
+        int arr[] = {1, 2, 3, 2, 4, 3, 5};
+        Arrays.sort(arr);
+        //1,2,2,3,3,4,5
+        List<Integer> duplicate = new ArrayList<>();
+        for(int num = 0; num < arr.length - 1; num ++){
+
+            if(arr[num] == arr[num + 1]){
+                duplicate.add(arr[num]);
+            }
+
+        }
+        duplicate.stream().forEach(System.out::println);
 
     }
 }
