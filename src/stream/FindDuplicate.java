@@ -61,5 +61,11 @@ public class FindDuplicate {
         }
         duplicate.stream().forEach(System.out::println);
 
+
+        Set<Integer> res = new HashSet<>();
+        List<Integer> finalSet = numbers.stream().filter(s -> !res.add(s)).collect(Collectors.toList());
+
+        System.out.println("using set : "+ finalSet);
+
     }
 }
