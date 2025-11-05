@@ -7,7 +7,6 @@ public class FirstNonRepeatedCharacter {
 
         String str = "aswsda";
 
-        Map<String,Integer> findCharCount = str.chars().map(s -> s char)
 
     }
 }
