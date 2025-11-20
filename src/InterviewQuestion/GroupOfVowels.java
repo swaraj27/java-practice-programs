@@ -8,9 +8,6 @@ import java.util.stream.Collectors;
 
 public class GroupOfVowels {
     public static void main(String[] args) {
-
-
-
        List<String> strList =  Arrays.asList("cat", "bat", "hat", "mate", "bee", "tree") ;
 
         System.out.println(countVowels("mate"));
@@ -18,13 +15,11 @@ public class GroupOfVowels {
                                                     .collect(Collectors.groupingBy(s->countVowels(s)));
 
         System.out.println(groupOfVowels);
-
         List<List<String>> vowelsList = new ArrayList<>(groupOfVowels.values());
         System.out.println(vowelsList);
     }
 
     private static int countVowels(String word){
-
         return (int) word.chars()
                 .filter(s -> "aeiouAEIOU".indexOf(s) != -1)
                 .count();

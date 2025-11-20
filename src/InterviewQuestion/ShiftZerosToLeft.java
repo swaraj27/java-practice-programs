@@ -18,14 +18,7 @@ public class ShiftZerosToLeft {
             }
 
         }
-
         nonZeros.addAll(zeros);
-
         System.out.println("Final output : "+nonZeros);
-
-
-
-
-
     }
 }

@@ -1,18 +1,19 @@
 package CollectionsExample;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 //Find First Non-Repeated Character in a String
 public class FindFirstChar {
     public static void main(String[] args) {
-        String str = "swiss";
+        String str = "sowiss";
 
         System.out.println("Get non repeated first char : "+findFirstNonRepeatedChar(str));
     }
 
     public  static Character findFirstNonRepeatedChar(String str){
-        Map<Character,Integer> charCountMap = new HashMap<>();
+        Map<Character,Integer> charCountMap = new LinkedHashMap<>();
 
         for(char c : str.toCharArray()){
             charCountMap.put(c, charCountMap.getOrDefault(c,0)+1);
